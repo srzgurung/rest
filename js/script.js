@@ -15,4 +15,24 @@ document.querySelector('.scroll-top-btn').addEventListener('click', function(e) 
   });
 });
 
+// login form
+function openForm(){
+  document.getElementById("login-box").style.display="block";
+  document.getElementById("register-box").style.display="none";
+  
+}
+function closeForm(){
+  document.getElementById("login-box").style.display="none";
+}
+
+// sign up form
+function openRegister(){
+  document.getElementById("register-box").style.display="block";
+  document.getElementById("login-box").style.display="none";
+  
+}
+function closeRegister(){
+  document.getElementById("register-box").style.display="none";
+}
+
 

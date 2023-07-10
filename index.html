@@ -25,6 +25,19 @@
                 <li><a href="#">Locations</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <a href="#" class="scroll-top-btn">
+                    <i class="fas fa-chevron-up"></i>
+                  </a>
+                <div class="button">
+                    <button class="btn"  onclick="openForm()">Login
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="sbtn" onclick="openRegister()">Sign Up
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <div class="loginbtn"></div>
+            
             </ul>
         
             </div>
@@ -34,19 +47,7 @@
 </header>
 
 <body>
-    <a href="#" class="scroll-top-btn">
-        <i class="fas fa-chevron-up"></i>
-      </a>
-    <div class="button">
-        <button class="btn"  onclick="openForm()">Login
-            <i class="fas fa-user"></i>
-        </button>
-        <button class="sbtn" onclick="openForm()">Sign Up
-            <i class="fas fa-user"></i>
-        </a>
-    </div>
-    <div class="loginbtn"></div>
-    <!-- <img src="fbg.jpg" alt="backgroundimg"> -->
+   
 
     <section class="hero">
 
@@ -190,24 +191,68 @@
 
                     <div class="register-link">
                         <p>Don't Have An Account?
-                            <a href="#">Register</a>
+                            <a href="#" onclick="openRegister()">Register</a>
                         </p>
                         <a href="#" onclick="closeForm()">Close</a>
                     </div>
             </form>
         </div>
-          <script>
-            function openForm(){
-                document.getElementById("login-box").style.display="block";
-                
-            }
-            function closeForm(){
-                document.getElementById("login-box").style.display="none";
-            }
-          </script>
+          
            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   
+
+           <!-- regsiter form -->
+        
+           <div id="register-box">
+            <form action="">
+                <h3>Register</h3>
+                <div class="reg-box">
+                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                     <input type="email"required>
+                     <label>Email</label>
+                    </div>
+
+                    <div class="reg-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email"required>
+                        <label>First Name</label>
+                       </div>
+
+                       <div class="reg-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email"required>
+                        <label>Last Name</label>
+                       </div>
+
+                       <div class="reg-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email"required>
+                        <label>Contact Number</label>
+                       </div>
+
+                       <div class="reg-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="email"required>
+                        <label>Password</label>
+                       </div>
+
+                    <div class="reg-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password"required>
+                        <label>Confirm Password</label>
+                       </div>
+                     
+                    <button class="rbtn" type="submit">Register</button>
+
+                    <div class="regsiter-link">
+                        <p>Already Have An Account?
+                            <a href="#" onclick="openForm()">Login</a>
+                        </p>
+                        <a href="#" onclick="closeRegister()">Close</a>
+                    </div>
+            </form>
+        </div>
+        
         </body>
 </html>
 
