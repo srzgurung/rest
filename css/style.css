@@ -27,9 +27,11 @@ header {
 	display: flex;
 	width: 100%;
 	height: 78px;
-	background-color: goldenrod;
+	background-color: darkred;
 	justify-content: space-between;
 	flex-direction: row;
+    position: fixed;
+    z-index: 100;
 }
 
 .navy ul {
@@ -78,7 +80,7 @@ header {
     
     display: inline-block;
     padding: 10px 20px;
-    background-color:darkgreen;
+    background-color:darkred;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
@@ -90,7 +92,7 @@ header {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 10px;
-    background-color:blue;
+    background-color:darkgreen;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -103,7 +105,7 @@ header {
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
- background-color:green;
+ background-color:darkred;
 }
 
 /* Hero Section Styles */
@@ -130,32 +132,34 @@ header {
 }
 
 .cta-button {
-    display: inline-block;
+    position:relative;
+    left:-102%;
     padding: 12px 24px;
     background-color:beige;
     color: #333;
     text-decoration: none;
     border-radius: 4px;
     font-size: 18px;
+    z-index: -1;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: forestgreen
+    background-color: forestgreen;
 }
 .exbtn {
     display: inline-block;
-    padding: 12px 24px;
-    background-color:lightgreen;
-    color: #333;
+    padding: 18px 23px;
+    background-color:rgba(0, 50, 110, .8);
+    color: white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 30px;
     font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
 .exbtn:hover{
-    background-color:limegreen;
+    background-color:teal;
 }
 
 .obtn {
@@ -164,7 +168,7 @@ header {
     background-color:lightyellow;
     color: #333;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 25px;
     font-size: 18px;
     transition: background-color 0.3s ease;
 }
@@ -198,7 +202,8 @@ header {
 
 /* Menu Section Styles */
 .menu {
-    background-color:wheat;
+    background-image:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/astro.webp);
+    background-size: cover;
     padding: 50px 0;
 }
 
@@ -216,8 +221,7 @@ header {
 /* Reservation Section Styles */
 .reservation {
     background-size: cover;
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    padding: 18px;
 }
 
 .reservation-content {
@@ -255,7 +259,7 @@ ul li:hover a {
 .hero {
     width: 100%;
 	height: 69vh;
-	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/foood.jpg);
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/astro.webp);
 	background-size: cover;
 	color: white;
 }
@@ -345,7 +349,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+	background-image:  linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),url(/astro.webp);
     padding: 70px 0;
 }
 .footer-col{
@@ -391,7 +395,7 @@ ul{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background-color: #24262b;
+	background-color:  linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8));
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
@@ -430,26 +434,7 @@ ul{
     width: 100%;
 }
 }
-/*.scroll-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background-color:wheat;
-    color: #fff;
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    }
-  
-  .scroll-to-top-btn:hover {
-    background-color:green;
-  }*/
+
   .scroll-top-btn {
     position: fixed;
     bottom: 20px;
@@ -463,6 +448,113 @@ ul{
   .scroll-top-btn i {
     font-size: 20px;
   }
-  
-  
-  
+.fas, .far, .fas{
+    color: deepskyblue;
+}
+  /* Login form */
+
+#login-box{
+    
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 388px;
+    background: lightseagreen;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 23px;
+    left: 50%;
+    top:7%;
+    transform: translate(-50%,0%);
+    box-shadow: 0 0 10px 3px white;
+    z-index: 300;
+}
+h3{
+font-size: 2em;
+color: white;
+text-align: center;
+}
+.input-box{
+    position:relative;
+    width: 100%;
+    margin: 30px 0;
+    border-bottom: 2px solid white;
+
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 35PX 0 5PX;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: white;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+.remember-forgot{
+margin: -15px 0 15px;
+font-size: .9em;
+color: white;
+display: flex;
+justify-content: space-between;
+}
+.remember-forgot label input{
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: white;
+    text-decoration: none;
+}
+.remember-forgot :hover{
+    text-decoration: underline;
+}
+
+.lbtn{
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    }
+    .register-link{
+        font-size: .9em;
+        color: white;
+        text-align: center;
+        margin: 25px 0 10px;
+    }
+    .register-link p a{
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .register-link p a:hover{
+        text-decoration: underline;
+    }

@@ -38,21 +38,26 @@
         <i class="fas fa-chevron-up"></i>
       </a>
     <div class="button">
-        <a href="btn" class="btn">Login
+        <button class="btn"  onclick="openForm()">Login
+            <i class="fas fa-user"></i>
+        </button>
+        <button class="sbtn" onclick="openForm()">Sign Up
             <i class="fas fa-user"></i>
         </a>
-        <a href="btn" class="sbtn">Sign Up</a>
     </div>
     <div class="loginbtn"></div>
     <!-- <img src="fbg.jpg" alt="backgroundimg"> -->
 
     <section class="hero">
+
+       
+        
         <div class="hero-content">
          <a href="#" class="cta-button">Promo Code</a>
         </div>
     </section>
 
-    <section class="reservation" style="background-image: url(woo.gif);">
+    <section class="reservation" style="background-image: url(done.png);">
         <div class="reservation-content">
             <h2>Make Your First Order</h2>
             <p>Order your first food today and get 30% discount</p>
@@ -101,11 +106,11 @@
     </section>
     
    
-    <section class="about" style="background-image: url(chilly.png);" id="about">
+    <section class="about" style="background-image: url(isthis.png);" id="about">
         <div class="about-content">
             <div class="card">
                 <h2>About Us</h2>
-                <p>Hamro Restaurant is a renowned dining destination, serving exquisite cuisine crafted from the freshest ingredients.</p>
+                <p>Srz Food Delivery is a renowned dining destination, serving exquisite cuisine crafted from the freshest ingredients.</p>
                 <p>Our dedicated team of talented chefs and friendly staff strive to create an extraordinary culinary experience for our guests, offering a diverse menu inspired by international flavors.</p>
                 <p>With a warm and inviting ambiance, Hamro Restaurant is the perfect place to indulge in exceptional food, enjoy memorable moments, and create lasting memories.</p>
             </div>
@@ -164,8 +169,47 @@
             </div>
         </div>
           </footer>
+          <div id="login-box">
+            <form action="">
+                <h3>LOGIN</h3>
+                <div class="input-box">
+                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                     <input type="email"required>
+                     <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password"required>
+                        <label>Password</label>
+                       </div>
+                       <div class="remember-forgot">
+                        <label><input type="checkbox">Remember Me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button class="lbtn" type="submit">login</button>
+
+                    <div class="register-link">
+                        <p>Don't Have An Account?
+                            <a href="#">Register</a>
+                        </p>
+                        <a href="#" onclick="closeForm()">Close</a>
+                    </div>
+            </form>
+        </div>
+          <script>
+            function openForm(){
+                document.getElementById("login-box").style.display="block";
+                
+            }
+            function closeForm(){
+                document.getElementById("login-box").style.display="none";
+            }
+          </script>
+           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+           <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
         </body>
 </html>
-     <!--POP UP LOGIN FORM  -->
+
 
      
