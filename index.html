@@ -193,7 +193,7 @@
                         <p>Don't Have An Account?
                             <a href="#" onclick="openRegister()">Register</a>
                         </p>
-                        <a href="#" onclick="closeForm()">Close</a>
+                       <p class="inline"> <a href="#" onclick="closeForm()">Close</a></p>
                     </div>
             </form>
         </div>
@@ -204,21 +204,15 @@
            <!-- regsiter form -->
         
            <div id="register-box">
-            <form action="">
+             <form action="">
                 <h3>Register</h3>
                 <div class="reg-box">
                      <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
                      <input type="email"required>
-                     <label>Email</label>
+                     <label>First Name</label>
                     </div>
 
                     <div class="reg-box">
-                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                        <input type="email"required>
-                        <label>First Name</label>
-                       </div>
-
-                       <div class="reg-box">
                         <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
                         <input type="email"required>
                         <label>Last Name</label>
@@ -227,6 +221,12 @@
                        <div class="reg-box">
                         <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
                         <input type="email"required>
+                        <label>Email</label>
+                       </div>
+
+                       <div class="reg-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="number"required>
                         <label>Contact Number</label>
                        </div>
 
@@ -244,13 +244,14 @@
                      
                     <button class="rbtn" type="submit">Register</button>
 
-                    <div class="regsiter-link">
-                        <p>Already Have An Account?
-                            <a href="#" onclick="openForm()">Login</a>
-                        </p>
-                        <a href="#" onclick="closeRegister()">Close</a>
-                    </div>
-            </form>
+                    <div class="regsiter-input">
+                        <p class="banana">Already Have An Account?
+                            <a class="apple" href="#" onclick="openForm()">Login</a>
+                        </p></div>
+                        <div class="rinline"></div> <a class="closereg" href="#" onclick="closeRegister()">Close</a></div>
+
+                    </form>
+           </div>
         </div>
         
         </body>
